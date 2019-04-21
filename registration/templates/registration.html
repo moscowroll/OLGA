@@ -5,8 +5,10 @@
 {% block title %} GGGGGG {% endblock title %}
 
 {% block content %}
+<header>
 
-<form method="post">
+<div class="reg_form">
+<form method="post" action="create/" >
 
   {% csrf_token %}
 
@@ -14,7 +16,11 @@
     {{ form }}
   </table>
 
-  <input type="submit" value="Let's fuckin' go ">
+  <input type="submit" value="Let's fuckin' go " id="btn" class="wd">
 
 </form>
+
+</div>
+
+</header>
 {% endblock content %}
