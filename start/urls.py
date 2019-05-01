@@ -7,7 +7,10 @@ from . import views
 
 urlpatterns =  [
 
-    path('', views.start_view)
+    path('', views.start_view),
+    path('identify/', include('registration.urls')),
+    # path('crate', views.create),
+    path('question_1/', views.question_1)
 
 
 

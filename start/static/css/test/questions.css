@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300');
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: #686868;
+
+  --def: #fff;
+   --inv:  #96B7C4;
+}
+
+
+.main{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+
+
+.content{
+  position: relative;
+  height: 273px;
+  background-image: url('slider-bg.png');
+  background-repeat: repeat-x;
+  background-position: left;
+  /* background-size: cover; */
+  /* position: relative; */
+}
+
+
+
+.middle{
+  position: relative;
+  width: 100%;
+  height: 40%;
+  background-color: #F4F4F4;
+
+
+}
+
+
+.middle .info_query{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+
+
+.content .about_query{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
+  -ms-transform: translate(-50%, -30%);
+  -o-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
+  color: #404040;
+  font-family: 'Cormorant Garamond', serif;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+
+}
+
+
+
+.middle .info_query .questions{
+
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -30%);
+  -moz-transform: translate(-50%, -30%);
+  -ms-transform: translate(-50%, -30%);
+  -o-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
+  color: #404040;
+  font-family: 'Cormorant Garamond', serif;
+
+  width: 100%;
+  height: 50%;
+
+}
+
+
+.flex_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+
+
+.flex_block{
+  width: 40%;
+  height: 100%;
+  justify-content: center;
+
+
+}
+
+
+ /* @media screen and (max-width: 600px) {
+   body{
+     color: red;
+   }
+} */
+
+
+@media (max-width: 799px) {
+
+  .flex_container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+}
+
+
+
+.normalize_size{
+  width: 600px;
+  height: 299px;
+  display:block;
+	margin:auto;
+
+}

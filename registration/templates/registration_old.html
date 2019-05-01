@@ -1,0 +1,75 @@
+{% extends "start_view.html" %}
+
+{% load staticfiles %}
+
+
+{% block links %}
+
+  <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+
+
+{% endblock links %}
+
+{% block title %} О тебе {% endblock title %}
+
+{% block content %}
+
+
+
+
+
+<div class="content about_test">
+  <div class="talk_about_yourself">
+    <h1>Но перед тестом, немного расскажите нам о вас</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="reg">
+  <form  action='create/' method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="field">
+        <label for="{{ field.id_for_label }}" class="label">{{ field.html_name }}</label>
+        {{ field }}
+      </div>
+    {% endfor %}
+
+    <button type="submit" name="button" >ЛОЛ</button>
+  </form>
+
+
+</div>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+<!-- <div class="reg_form">
+  <form method="post" action="create/" >
+
+    {% csrf_token %}
+
+    <table>
+      {{ form }}
+    </table>
+
+    <div class="btn from-middle">
+      <input type="submit" value="Let's fuckin' go " id="btn" >
+
+
+    </div>
+  </form>
+
+</div> -->

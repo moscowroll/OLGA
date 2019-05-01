@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'start',
     'registration'
+    # 'testhuem',
+
 ]
 
 MIDDLEWARE = [
@@ -138,10 +140,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+STATIC_ROOT='/start/static/'
 
+# lol = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static/")
 ]
 
 

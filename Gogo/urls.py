@@ -22,4 +22,5 @@ urlpatterns = [
 
     path('', include('start.urls')  ),
     path('registration/', include('registration.urls'))
+    # path("testhuem/", include("testhuem.urls"))
 ]

@@ -1,0 +1,27 @@
+{% extends 'question_base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Вопросы
+{% endblock title %}
+
+
+
+{% block unique_question %}
+
+За кого бы вы охотнее всего отдали свой голос за кандидата - женщину или кандидата - мужчину?
+
+{% endblock unique_question %}
+
+
+{% block div_with_images %}
+
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/1_1.png' %}" alt="" class="normalize_size">
+</div>
+<div class="flex_block">
+  <img src="{% static 'img/kandidati/1_2.jpg' %}" alt="" class="normalize_size">
+</div>
+
+{% endblock div_with_images %}

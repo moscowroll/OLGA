@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link href=  "    {% static 'css/main.css' %}"             rel="stylesheet">
+
+    <link href=  "{% static 'css/bootstrap.min.css' %}"    rel="stylesheet">
+    <link href=  "{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href=  "{% static 'css/animate.min.css' %}"      rel="stylesheet">
+    <!-- <link href=  '{% static "css/lightbox.css" %}' rel="stylesheet">
+    <link href=  '{% static "css/main.css" %}' rel="stylesheet">
+    <link href=  '{% static "css/responsive.css" %}' rel="stylesheet"> -->
+
+
+
+    <title>{% block title %}gg {% endblock title %}</title>
+  </head>
+  <body>
+
+
+
+    <!-- <p class="animated bounce">HUY</p> -->
+    <p >HUY</p>
+
+
+      {%  block content %}
+
+      {% endblock content %}
+
+
+  </body>
+
+
+
+  <script src="{% static 'js/script.js' %}"></script>
+
+</html>

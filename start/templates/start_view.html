@@ -1,30 +1,87 @@
-{% extends "base.html" %}
 
-{% block title %} LOLOLO {% endblock title %}
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <meta charset="utf-8">
+    {% block links %} {% endblock links %}
+    <title>{% block title %}  Start Page  {% endblock title %}</title>
+  </head>
+  <body>
+
+    {% block content %}
+<div class="main">
+  <!-- <div class="header">
+  </div> -->
+  <div class="content">
+    <div class="left_side_text" >
+
+      <h1 class="animated fadeInLeft delay-0.3s">
+      Здравствуй, дорогой друг!
+      </h1>
+      <h3 class="animated fadeInLeft delay-0.7s ">Спасибо тебе за помощь в написании моей дипломной работы.</h3>
+    </div>
+    <div class="right_side_img animated fadeInRight" >
+
+      <!-- <div class="btn from-middle">Начать тест</div>   div onclick!!!!  -->
+      <div class="btn from-middle"><a href="/identify">Начать тест</a></div>
+
+    </div>
 
 
-{% block content %}
+  </div>
+
+  <div class="middle animated fadeInUpBig slow">
+
+    <div class="explanation">
+
+      <div class="about_test">
+         <h1>Все, что тебе необходимо - выбрать один из представленных ответов в каждом вопросе теста</h1>
+
+      </div>
+    </div>
 
 
-<header>
-  <h1>Чтобы помочь нам и пройти тест, нажмите на кнопку снизу</h1>
-  <!-- <a href="/registration">I want to check this test!</a> -->
+    <div class="checkbox_example">
 
+      <p><input type="checkbox" id="checkbox1" name="a" value="1417"> 1417</p>
+      <p><input type="checkbox" id="checkbox2" name="a" value="1680" > 1680</p>
+      <p><input type="checkbox" id="checkbox3" name="a" value="1883" > 1883</p>
 
+    </div>
+  </div>
 
-  <button id="btn" class="wd">жмем</button>
-</header>
+  <div class="last_hint animated fadeIn delay-2s">
+    <div class="danger">
+      <p class="animated pulse infinite important">И самое главное </p>
+    </div>
+    <div class="danger_description">
+      Мы оцениваем не кандидатов, а агитационную рекламу, это очень важно!
+    </div>
 
-<main>
-  <p>And the main section.</p>
-</main>
+  </div>
+  <div class="start_button">
 
-<footer>
-  <p>And, the footer.</p>
-  <small>🕷 Wish you luck, <a href="http://armantaherian.com">Arman</a>.</small>
-</footer>
-
+    <div class="exact_button">
+      <p>shlk</p>
+    </div>
+  </div>
+</div>
 
 
 
 {% endblock content %}
+  </body>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/script.js' %}">
+
+  </script>
+</html>

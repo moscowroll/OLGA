@@ -12,17 +12,19 @@ def registration(request):
 
 
 
-
 def create(request):
+    print('soski')
     if request.method == "POST":
         someone = models.Person()
         someone.name = request.POST.get("name")
-        someone.birth_date = request.POST.get("birth_date")
+        someone.age = request.POST.get("age")
         someone.gender = request.POST.get("gender")
         someone.save()
-    return HttpResponseRedirect("/")
+    return HttpResponseRedirect("/question_1/")
 
 
+def question_1(request):
+    return render(request, "question_1.html")
 
 
 # Create your views here.

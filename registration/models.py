@@ -5,6 +5,6 @@ from django.db import models
 
 class Person(models.Model):
     name = models.CharField(max_length = 20)
-    birth_date = models.DateField()
+    age = models.IntegerField()
     gender = models.CharField(max_length = 10)
 # Create your models here.
