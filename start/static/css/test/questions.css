@@ -146,4 +146,16 @@ body{
   display:block;
 	margin:auto;
 
+  background: #000;
+  opacity: 1;
+  transition: opacity 124ms linear, transform 124ms linear;  /* Плавное изменение прозрачности и увеличения */
+	/* width: 100%; */
+	/* height: auto; */
+  /* display: block; /* Убираем полосу под картинкий */
+}
+
+
+.normalize_size:hover{
+  opacity: 0.9; /* Высветляем картинку, но она становится темнее, так как под ней черный фон */
+    transform: scale(1.05); /* Увеличение картинки */
 }
