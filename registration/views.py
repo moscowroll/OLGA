@@ -13,12 +13,17 @@ def registration(request):
 
 
 def create(request):
-    print('soski')
+    # print('soski')
     if request.method == "POST":
         someone = models.Person()
         someone.name = request.POST.get("name")
         someone.age = request.POST.get("age")
         someone.gender = request.POST.get("gender")
+        someone.login = request.POST.get("login")
+        print(someone.name)
+        print(someone.age)
+        print(someone.gender)
+        print(someone.login)
         someone.save()
     return HttpResponseRedirect("/question_1/")
 
