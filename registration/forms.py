@@ -34,3 +34,13 @@ class UserForm(forms.ModelForm):
             'age': forms.TextInput(attrs={'class': 'myfield'}),
             'gender': forms.TextInput(attrs={'class': 'myfield'})
         }
+
+
+
+
+from django.contrib.auth.forms import AuthenticationForm
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={"class":"myfield"}))
+    password = forms.CharField(widget=forms.TextInput(attrs={"class":"myfield"}))

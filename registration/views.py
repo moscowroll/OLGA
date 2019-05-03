@@ -1,6 +1,10 @@
 from django.shortcuts import render,HttpResponseRedirect
 
+from django.contrib import auth
+
+
 from .forms import UserForm
+from . import forms
 
 from .  import models
 
@@ -25,6 +29,14 @@ def create(request):
         print(someone.gender)
         print(someone.login)
         someone.save()
+        # new_user_form = Reg(request.POST)
+
+        # new_user = new_user_form.save()
+            # new_user = auth.authenticate(username = new_user_form.cleaned_data['login'], password = new_user_form.cleaned_data['age'])
+        auth.login(request, someone, backend='django.contrib.auth.backends.ModelBackend')
+
+
+
     return HttpResponseRedirect("/question_1/")
 
 

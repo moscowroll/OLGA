@@ -24,4 +24,10 @@
   <img src="{% static 'img/kandidati/1_2.jpg' %}" alt="" class="normalize_size">
 </div>
 
+
+<form class="" action="/check_first/" method="post">
+{% csrf_token %}
+<button type="submit" name="button">hoh</button>
+</form>
+
 {% endblock div_with_images %}

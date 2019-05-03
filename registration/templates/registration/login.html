@@ -36,16 +36,19 @@
         <div class="cent">
           <div class="trash">
 
-        <form  action='create/' method="post">
+        <form  action='create_user/' method="post">
           {% csrf_token %}
-          {% for field in form %}
-            <div class="field">
-              <label for="{{ field.id_for_label }}" class="label">{{ field.html_name }}</label>
-              {{ field }}
-            </div>
-          {% endfor %}
 
-          <button type="submit" name="button" class="botr">Начать тест</button>
+          <!-- {% for field in authentication_form %} -->
+            <!-- <div class="field"> -->
+              <!-- <label for="{{ field.id_for_label }}" class="label">{{ field.html_name }}</label> -->
+              <!-- {{ field }} -->
+            <!-- </div> -->
+                      <!-- {% endfor %} -->
+            <div class="field">
+              {{form.as_p}}
+            </div>
+            <button type="submit" name="button" class="botr">Начать тест</button>
         </form>
       </div>
         </div>
